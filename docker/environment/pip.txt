@@ -1,0 +1,7 @@
+jupyter
+jupyterlab
+mordred==1.1.2
+tensorboard==2.5.0
+tensorflow==2.5.0
+tqdm==4.64.1
+xgboost==0.81

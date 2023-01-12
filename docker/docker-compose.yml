@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  app:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NVIDIA_DISABLE_REQUIRE=1
+    ports:
+      - ${HTTP_PORT}:8888
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
